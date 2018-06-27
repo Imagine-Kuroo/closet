@@ -1,0 +1,99 @@
+<style lang="scss">
+  .userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .userinfo-avatar {
+        width: 120rpx;
+        height: 120rpx;
+        border-radius: 50%;
+    }
+
+    .userinfo-nickname {
+        color: red;
+    }
+  }
+
+</style>
+
+<template>
+    <view class="container">
+        <view class="userinfo">
+            <open-data class="userinfo-avatar" type="userAvatarUrl"></open-data>
+            <open-data class="userinfo-nickname" type="userNickName" lang="zh_CN"></open-data>
+            <open-data type="userGender" lang="zh_CN"></open-data>
+        </view>
+
+        <button class="btn_class" type="primary" size="{{primarySize}}" loading="{{loading}}"
+        disabled="{{disabled}}" @tap="chooseImage"> 本地选择图片/相机拍摄 </button>
+        <image style="width: 100rpx;height:auto; background-color: #eeeeee;" mode="{{choosedPic}}" src="{{src}}"></image>
+
+        <button class="btn_class" type="primary" size="{{primarySize}}" loading="{{loading}}"
+        disabled="{{disabled}}" @tap="saveToQiniu"> 保存选中的图片到七牛云 </button>
+
+        <button class="btn_class" type="primary" size="{{primarySize}}" loading="{{loading}}"
+        disabled="{{disabled}}" @tap="miniProPay"> 试图发起支付 </button>
+
+        <text>当前版本号：{{deviceInfo}}</text>
+    </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Personal extends wepy.page{
+    config = {
+        navigationBarTitleText: '个人中心',
+    }
+
+    components = {
+
+    }
+
+    data = {
+        deviceInfo          :   '',
+    }
+
+    onReady(){
+        this.getDeviceInfo();
+    }
+
+    onLoad(){
+        
+    }
+
+    getDeviceInfo(){
+        const _this = this;
+        wx.getSystemInfo({
+            success: function(res) {
+                _this.deviceInfo = res.SDKVersion;
+            }
+        })
+    }
+
+    miniProPay(){
+
+    }
+
+    chooseImage(){
+        wx.chooseImage({
+            count: 1, // 默认9
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: function (res) {
+                // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+                // var tempFilePaths = res.tempFilePaths
+                console.log(res.tempFilePaths);
+                console.log(this.album.poster);
+                this.choosedPic = res.tempFilePaths;
+            }
+        })
+    }
+
+    saveToQiniu(){
+
+    }
+}
+
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Parallax</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .wrapper_parallax {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .parallax_item {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .is_layer_0 {
+            background-size: cover;
+            background-image: url('./img/main_layer1.png');
+            background-position: center center;
+        }
+        
+        .is_layer_1 {
+            background-image: url('./img/main_layer2.png');
+            background-position: cover;
+        }
+        
+        .is_layer_2 {
+            background-image: url('./img/main_layer3.png');
+            background-position: cover;
+        }
+        
+        .is_layer_3 {
+            background-image: url('./img/main_layer4.png');
+            background-position: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="scene" class="wrapper_parallax" data-relative-input="true">
+        <div class="parallax_item is_layer_0" data-depth="0.0"></div>
+        <div class="parallax_item is_layer_1" data-depth="0.2"></div>
+        <div class="parallax_item is_layer_2" data-depth="0.4"></div>
+        <div class="parallax_item is_layer_3" data-depth="0.6"></div>
+    </div>
+</body>
+<script src="./parallax.js"></script>
+<script>
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
+    parallaxInstance.friction(0.2, 0.2);
+</script>
+
+</html>

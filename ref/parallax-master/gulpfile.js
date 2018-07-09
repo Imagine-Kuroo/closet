@@ -35,7 +35,7 @@ function showError(arg) {
 }
 
 gulp.task('build:scss', () => {
-  return gulp.src(path.join('examples', 'assets', 'styles.scss'))
+  return gulp.src(path.join('examples', 'assets', '*.scss'))
     .pipe(sass({
       outputStyle: 'nested',
       precision: 10,

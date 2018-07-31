@@ -1,21 +1,20 @@
 <template>
-    <div id="page">{{name}}</div>
+    <div id="test">{{abc}}</div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      name: "ddddd"
-    };
-  }
-};
+    data(){
+        return {
+            abc: '13'
+        }
+    },
+}
 </script>
 
-<style>
-#page {
-  color: red;
-}
+<style scoped>
+    #test{
+        color: red;
+    }
 </style>
-
 

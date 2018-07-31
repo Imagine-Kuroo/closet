@@ -1,20 +1,19 @@
 <template>
-    <div id="test">{{abc}}</div>
+    <div id="app">
+        <div id="cover"></div>
+    </div>
 </template>
 
 <script>
 export default {
     data(){
         return {
-            abc: '13'
         }
     },
 }
 </script>
 
 <style scoped>
-    #test{
-        color: red;
-    }
+   
 </style>
 

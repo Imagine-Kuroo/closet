@@ -6,14 +6,14 @@ const params = {
     post: 465,
     secure: true,
     auth: {
-        user: 'abc@163.com',
-        pass: 'pwd'
+        user: 'maggiegu94@163.com',
+        pass: '123qwe'
     }
 };
 
 const mailOptions = {
-    from: 'abc@163.com ', // sender address
-    to: 'qwe@qq.com', // list of receivers
+    from: 'maggiegu94@163.com ', // sender address
+    to: '401447282@qq.com', // list of receivers
     subject: 'Hello ✔', // Subject line
     text: 'Hello world ✔', // plaintext body
     html: '<b>Hello world ✔</b>', // html body

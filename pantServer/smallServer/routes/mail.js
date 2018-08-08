@@ -3,16 +3,22 @@ var nodemailer = require('nodemailer');
 var router = express.Router();
 var URL = require('url');
 
-router.get('/sendMail', function (req, res, next) {
-  var params = URL.parse(req.url, true).query;
+router.get('/sendmail', function (req, res, next) {
+  var query = URL.parse(req.url, true).query;
   var mailObj = {
-    email: params.email,
-    nickname: params.nickname,
-    title: params.title,
-    link: params.link,
+    email: query.email,
+    nickname: query.nickname,
+    title: query.title,
+    link: query.link,
   }
 
-  const baseParams = {
+  var response = {
+    errno: '',
+    data: mailObj,
+    message: '',
+  }
+
+  const params = {
     host: 'smtp.163.com',
     post: 465,
     secure: true,
@@ -23,7 +29,7 @@ router.get('/sendMail', function (req, res, next) {
   };
 
   const mailOptions = {
-    from: 'maggiegu94@163.com', // sender address
+    from: 'maggiegu94@163.com ', // sender address
     to: mailObj.email, // list of receivers
     subject: '您订阅的钬花方案包已经送到啦~', // Subject line
     text: '请小主查收！', // plaintext body
@@ -34,21 +40,21 @@ router.get('/sendMail', function (req, res, next) {
     }]
   };
 
-  var transporter = nodemailer.createTransport(baseParams);
-  
+  var transporter = nodemailer.createTransport(params);
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log('--->', error);
+      console.log('*******>', error);
+      response.errno = 99989;
+      response.message = '发送邮件失败！';
+      res.send(JSON.stringify(response));
     } else {
       console.log('Message sent: ' + info.response);
+      response.errno = 0;
+      response.message = '发送邮件成功！';
+      res.send(JSON.stringify(response));
     }
   });
 
-  var response = {
-    errno : 0
-  };
-
-  res.send(JSON.stringify(response));
 });
 
 module.exports = router;

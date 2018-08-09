@@ -3,8 +3,69 @@ var nodemailer = require('nodemailer');
 var router = express.Router();
 var URL = require('url');
 
-router.get('/sendmail', function (req, res, next) {
+var bodyParser = require('body-parser');
+var jsonParser = bodyParser.json();
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+router.post('/postmail', urlencodedParser, function (req, res) {
+  if (!req.body) return res.sendStatus(400);
+
+  var mailObj = {
+    email: req.body.email,
+    nickname: req.body.nickname,
+    title: req.body.title,
+    link: req.body.link,
+  }
+
+  var response = {
+    errno: '',
+    data: mailObj,
+    message: '',
+  }
+
+  const params = {
+    host: 'smtp.163.com',
+    post: 465,
+    secure: true,
+    auth: {
+      user: 'maggiegu94@163.com',
+      pass: '123qwe'
+    }
+  };
+
+  const mailOptions = {
+    from: 'maggiegu94@163.com ', // sender address
+    to: mailObj.email, // list of receivers
+    subject: '您订阅的钬花方案包已经送到啦~', // Subject line
+    text: '请小主查收！', // plaintext body
+    html: '使用钬花APP，收获更多精彩~', // html body
+    attachments: [{
+      filename: mailObj.title,
+      path: mailObj.link,
+    }]
+  };
+
+  var transporter = nodemailer.createTransport(params);
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log('*******>', error);
+      response.errno = 99989;
+      response.message = '发送邮件失败！';
+      res.send(response);
+    } else {
+      console.log('Message sent: ' + info.response);
+      response.errno = 0;
+      response.message = '发送邮件成功！';
+      res.send(response);
+    }
+  });
+
+})
+
+router.get('/getmail', function (req, res, next) {
   var query = URL.parse(req.url, true).query;
+
+  console.log();
   var mailObj = {
     email: query.email,
     nickname: query.nickname,

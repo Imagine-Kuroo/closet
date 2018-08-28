@@ -1,6 +1,9 @@
 
 # CLOSET
 
+### MATERIAL
++ 总结遇到的问题/知识点 和一些命令行等等
+
 ### INTRODUCTION
 + 一个装了一些demo的柜子
 

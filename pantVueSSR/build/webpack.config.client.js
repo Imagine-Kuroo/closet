@@ -52,8 +52,8 @@ if (isDev) {
     },
     devServer,
     plugins: defaultPlugins.concat([
-      new webpack.HotModuleReplacementPlugin(),
-      new webpack.NoEmitOnErrorsPlugin()
+      new webpack.HotModuleReplacementPlugin() //热模块替换
+      // new webpack.NoEmitOnErrorsPlugin() //编译错误时，使用该插件跳过输出阶段
     ])
   })
 } else {
@@ -86,30 +86,17 @@ if (isDev) {
         ]
       }]
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      },
+      runtimeChunk: true
+    },
     plugins: defaultPlugins.concat({
       // new MiniCssExtractPlugin({
       //   filename: 'style.[contentHash:8].css'
       // })
-    }),
-    optimization: {
-      splitChunks: {
-        cacheGroups: {
-          commons: {
-            chunks: 'initial',
-            minChunks: 2, maxInitialRequests: 5,
-            minSize: 0
-          },
-          vendor: {
-            test: /node_modules/,
-            chunks: 'initial',
-            name: 'vendor',
-            priority: 10,
-            enforce: true
-          }
-        }
-      },
-      runtimeChunk: true
-    }
+    })
   })
 }
 

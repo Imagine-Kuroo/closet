@@ -3,14 +3,13 @@ const HTMLPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base');
 
 const isDev = process.env.NODE_ENV === 'development';
 
 const devServer = {
-  port: 8088,
+  port: 8000,
   host: '0.0.0.0',
   overlay: {
     errors: true,
@@ -50,7 +49,7 @@ if (isDev) {
 } else {
   config = merge(baseConfig, {
     entry: {
-      app: path.join(__dirname, 'src/index.js'),
+      app: path.join(__dirname, '../src/index.js'),
       vendor: ['vue']
     },
     output: {
@@ -102,7 +101,6 @@ if (isDev) {
       runtimeChunk: true
     }
   })
-
 }
 
 module.exports = config;

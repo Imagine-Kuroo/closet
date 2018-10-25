@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div class="container">sssss</div>
 </template>
 
 <script>
@@ -10,5 +10,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="stylus" scoped>
+.container {
+  color: orange;
+  font-size 18px
+}
 </style>
+

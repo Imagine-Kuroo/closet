@@ -1,5 +1,8 @@
 <template>
-  <div class="container">sssss</div>
+  <div id="app">
+    APP PANEL
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
@@ -11,9 +14,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.container {
-  color: orange;
-  font-size 18px
+#app {
+  width: 100%;
+  height: 100%;
+  background-color: pink;
 }
 </style>
 

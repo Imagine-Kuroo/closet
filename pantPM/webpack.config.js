@@ -33,7 +33,7 @@ const config = {
             loader: 'url-loader',
             options: {
               limit: 1024,
-              name: '[name]-aaaaa.[ext]'
+              name: './images/[name]-[hash:8].[ext]'
             }
           }
         ]
@@ -85,10 +85,26 @@ if (isDev) {
     new webpack.NoEmitOnErrorsPlugin()
   )
 } else {
-  config.module.rules({
-    test:/\.styl/,
-    use: ExtractPlugin.extract({})
+  config.output.filename = "bundle.[chunkhash:8].js"
+  config.module.rules.push({
+    test: /\.styl/,
+    use: ExtractPlugin.extract({
+      fallback: 'style-loader',
+      use: [
+        'css-loader',
+        {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: true
+          }
+        },
+        'stylus-loader'
+      ]
+    })
   })
+  config.plugins.push(
+    new ExtractPlugin('styles.[chunkhash:8].css')
+  )
 }
 
 module.exports = config;

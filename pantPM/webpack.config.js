@@ -115,7 +115,7 @@ if (isDev) {
         vendor: {
           chunks: 'initial',
           name: 'vendor',
-          test: 'vendor',
+          // test: 'vendor',
           enforce: true
         }
       }

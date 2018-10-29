@@ -24,7 +24,7 @@ const defaultPlugins = [
     }
   }),
   new VueLoaderPlugin(),
-  new HTMLPlugin()
+  new HTMLPlugin(),
 ];
 
 let config;
@@ -79,7 +79,13 @@ if (isDev) {
                 publicPath: '../'
               }
             },
-            'css-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                module: true,
+                localIdentName: isDev ? '[path]-[name]-[hash:base64:5]' : '[hash:base64:5]'
+              }
+            },
             {
               loader: 'postcss-loader',
               options: {

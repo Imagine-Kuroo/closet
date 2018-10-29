@@ -2,8 +2,7 @@ const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-// const ExtractPlugin = require('extract-text-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -29,7 +28,7 @@ const config = {
                         loader: 'url-loader',
                         options: {
                             limit: 1024,
-                            name: '[name]_[hash].[ext]'
+                            name: '[name]_[hash:8].[ext]'
                         }
                     }
                 ]
@@ -65,15 +64,12 @@ if (isDev) {
     config.devtool = '#cheap-module-eval-source-map'
     config.devServer = {
         port: 8000,
-        // host: '0.0.0.0',
         host: 'localhost',
         overlay: {
             errors: true,
         },
         hot: true,
         open: true
-        // historyFallback: {}
-
     }
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin(),
@@ -85,7 +81,6 @@ if (isDev) {
         vendor: ['vue']
     }
     config.output.filename = '[name].[chunkhash:8].js'
-    // config.output.filename = '[name].[hash:8].js'
     config.module.rules.push({
         test: /\.styl/,
         use: [
@@ -109,19 +104,14 @@ if (isDev) {
         new MiniCssExtractPlugin({
             filename: 'style.[contentHash:8].css'
         }),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'vendor'
-        // })
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'runtime'
-        // })
     )
     config.optimization = {
         splitChunks: {
             cacheGroups: {
                 commons: {
                     chunks: 'initial',
-                    minChunks: 2, maxInitialRequests: 5,
+                    minChunks: 2, 
+                    maxInitialRequests: 5,
                     minSize: 0
                 },
                 vendor: {

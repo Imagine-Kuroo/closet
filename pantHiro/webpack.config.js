@@ -65,13 +65,15 @@ if (isDev) {
     config.devtool = '#cheap-module-eval-source-map'
     config.devServer = {
         port: 8000,
-        host: '0.0.0.0',
+        // host: '0.0.0.0',
+        host: 'localhost',
         overlay: {
             errors: true,
         },
-        hot: true
+        hot: true,
+        open: true
         // historyFallback: {}
-        // open: true
+
     }
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin(),

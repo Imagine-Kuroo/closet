@@ -38,7 +38,7 @@ if (isDev) {
         {
           test: /\.styl/,
           use: [
-            'style-loader',
+            'vue-style-loader',
             'css-loader',
             {
               loader: 'postcss-loader',

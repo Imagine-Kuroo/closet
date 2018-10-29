@@ -1,8 +1,8 @@
 
-.main-header[data-v-21b3a599] {
+.main-header {
   text-align: center;
 }
-.main-header h1[data-v-21b3a599] {
+.main-header h1 {
   font-size: 100px;
   color: rgba(175,47,47,0.4);
   font-weight: 100;

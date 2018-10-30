@@ -29,8 +29,6 @@ const defaultPlugins = [
   }),
 ];
 
-console.log('__dirname--->', __dirname);
-
 let config;
 
 if (isDev) {

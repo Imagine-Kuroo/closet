@@ -2,7 +2,8 @@
     <div id="app">
         <div id="cover"></div>
         <Header></Header>
-        <Todo></Todo>
+        <!-- <Todo></Todo> -->
+        <router-view />
         <Footer></Footer>
     </div>
 </template>

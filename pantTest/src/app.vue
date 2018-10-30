@@ -4,7 +4,7 @@
         <Header></Header>
         <!-- <Todo></Todo> -->
         
-        <router-link to="/app">app</router-link>
+        <router-link :to="{name:'app'}">app</router-link>
         <router-link to="/login">login</router-link>
         <router-link to="/login/exact">login-exact</router-link>
         <router-link to="/login/exact/two">login-exact-two</router-link>

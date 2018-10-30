@@ -12,7 +12,7 @@
 #footer {
   margin-top: 40px;
   text-align: center;
-  color: #bfbfbf;
+  color: #ccc;
   font-size: 16px;
   text-shadow: 0 1px 0 #ccc;
 }
@@ -153,14 +153,16 @@
 }
 
 
-#app[data-v-1e812b1a] {
+#app[data-v-63171ff6] {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  background-image: url(../resources/src/assets/images/1.604f3caf.jpg);
+  background-size: 100%;
 }
-#cover[data-v-1e812b1a] {
+#cover[data-v-63171ff6] {
   position: absolute;
   left: 0;
   right: 0;

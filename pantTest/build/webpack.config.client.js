@@ -24,8 +24,12 @@ const defaultPlugins = [
     }
   }),
   new VueLoaderPlugin(),
-  new HTMLPlugin(),
+  new HTMLPlugin({
+    template: path.join(__dirname, 'template.html')
+  }),
 ];
+
+console.log('__dirname--->', __dirname);
 
 let config;
 

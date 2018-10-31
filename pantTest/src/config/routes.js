@@ -14,12 +14,17 @@ export default [
       title: 'this is app',
       description: 'dasdas'
     },
-    children: [
-      {
-        path: 'test',
-        component: Login
-      }
-    ]
+    // 路由配置里的钩子
+    beforeEnter(to, from, next) {
+      console.log('app route before enter');
+      next()
+    }
+    // children: [
+    //   {
+    //     path: 'test',
+    //     component: Login
+    //   }
+    // ]
   },
   {
     path: '/login',

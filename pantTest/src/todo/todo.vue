@@ -29,6 +29,12 @@ import Tabs from "./tabs.vue";
 let id = 0;
 
 export default {
+  beforeRouteLeave(to, from, next) {
+    console.log("todo update enter");
+    if(global.confirm('确认要离开当前页面么？')){
+      next();
+    }
+  },
   components: {
     Item,
     Tabs

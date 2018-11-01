@@ -1,5 +1,7 @@
-import Todo from '../todo/todo.vue'
-import Login from '../views/login.vue'
+import testRoutes from './test'
+
+const Login = () => import('../views/login.vue');
+const Panel = () => import('../views/panel.vue');
 
 export default [
   {
@@ -7,35 +9,13 @@ export default [
     redirect: '/login'
   },
   {
-    path: '/app',
-    component: Todo,
-    name: 'app',
-    meta: {
-      title: 'this is app',
-      description: 'dasdas'
-    },
-    // 路由配置里的钩子
-    beforeEnter(to, from, next) {
-      console.log('app route before enter');
-      next()
-    }
-    // children: [
-    //   {
-    //     path: 'test',
-    //     component: Login
-    //   }
-    // ]
-  },
-  {
     path: '/login',
     component: Login
   },
   {
-    path: '/login/exact',
-    component: Login
-  },
-  {
-    path: '/login/exact/two',
-    component: Login
-  },
+    path: '/panel',
+    component: Panel,
+    children: testRoutes
+  }
+
 ]

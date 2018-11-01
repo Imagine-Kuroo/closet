@@ -71,7 +71,7 @@ if (isDev) {
       vendor: ['vue']
     },
     output: {
-      filename: '[name].[chunkhash:8].js'
+      filename: 'js/[name].[chunkhash:8].js'
     },
     module: {
       rules: [
@@ -104,7 +104,7 @@ if (isDev) {
     },
     plugins: defaultPlugins.concat([
       new MiniCssExtractPlugin({
-        filename: 'style.[contentHash:8].css'
+        filename: '[name].[contentHash:8].css'
       })
     ]),
     optimization: {

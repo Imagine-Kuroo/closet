@@ -9,7 +9,6 @@
       <div class="box_mainContent">
         <router-view />
       </div>
-      
   </section>
 </template>
 
@@ -31,14 +30,16 @@ export default {
   height: 100%;
   padding-left: 240px;
   position: relative;
+  color: #ffffff;
 }
 
 .box_header {
   width: 100%;
   margin-left: -240px;
-  background-color: red;
   position: fixed;
-  z-index: 100;
+  z-index: 999;
+  background-color: #515a6e;
+  box-shadow: 0 0 5px #333333;
 }
 
 .box_leftMenu {
@@ -46,8 +47,8 @@ export default {
   width: 240px;
   margin-left: -240px;
   float: left;
-  background-color: orange;
   padding-top: 60px;
+  background-color: #515a6e;
 }
 
 .box_mainContent {

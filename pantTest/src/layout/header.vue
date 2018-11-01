@@ -5,10 +5,6 @@
           <Icon type="ios-paper" />
           内容管理
       </MenuItem>
-      <MenuItem name="2">
-          <Icon type="ios-people" />
-          用户管理
-      </MenuItem>
       <Submenu name="3">
           <template slot="title">
               <Icon type="ios-stats" />
@@ -24,6 +20,10 @@
               <MenuItem name="3-5">流失用户</MenuItem>
           </MenuGroup>
       </Submenu>
+      <MenuItem name="2">
+          <Icon type="ios-people" />
+          用户管理
+      </MenuItem>
       <MenuItem name="4">
           <Icon type="ios-construct" />
           综合设置

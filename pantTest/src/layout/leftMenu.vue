@@ -7,8 +7,9 @@
                 Navigation One
             </template>
             <MenuGroup title="Item 1">
-                <MenuItem name="1-1">Option 1</MenuItem>
-                <MenuItem name="1-2">Option 2</MenuItem>
+                <MenuItem name="1-1"><router-link to="/login">login</router-link></MenuItem>
+                <MenuItem name="1-2"><router-link to="/test/list">testlist</router-link></MenuItem>
+                <MenuItem name="1-2"><router-link to="/test/update">testupdate</router-link></MenuItem>
             </MenuGroup>
             <MenuGroup title="Item 2">
                 <MenuItem name="1-3">Option 3</MenuItem>

@@ -7,9 +7,6 @@
         <Left-Menu/>
       </div>
       <div class="box_mainContent">
-        <router-link to="/login">login</router-link>
-        <router-link to="/test/list">testlist</router-link>
-        <router-link to="/test/update">testupdate</router-link>
         <router-view />
       </div>
       
@@ -41,6 +38,7 @@ export default {
   margin-left: -240px;
   background-color: red;
   position: fixed;
+  z-index: 100;
 }
 
 .box_leftMenu {

@@ -20,7 +20,12 @@ const config = {
       }, {
         test: /\.jsx$/,
         loader: 'babel-loader'
-      }, {
+      }, 
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+      },
+      {
         test: /\.(git|jpg|jpeg|png|svg)$/,
         use: [
           {

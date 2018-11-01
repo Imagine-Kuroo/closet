@@ -1,29 +1,24 @@
 <template>
     <div id="app">
         <div id="cover"></div>
-        <Header></Header>
+        <!-- <Header></Header> -->
         <!-- <Todo></Todo> -->
-        
-        <router-link to="/login">login</router-link>
-        <router-link to="/test/list">testlist</router-link>
-        <router-link to="/test/update">testupdate</router-link>
-        
         <router-view></router-view>
-        <Footer></Footer>
+        <!-- <Footer></Footer> -->
     </div>
 </template>
 
 <script>
-import Header from "./todo/header.vue";
-import Footer from "./todo/footer.jsx";
-import Todo from "./todo/todo.vue";
+// import Header from "./todo/header.vue";
+// import Footer from "./todo/footer.jsx";
+// import Todo from "./todo/todo.vue";
 
 export default {
-  components: {
-    Header,
-    Footer,
-    Todo
-  },
+//   components: {
+//     Header,
+//     Footer,
+//     Todo
+//   },
   data() {
     return {};
   }

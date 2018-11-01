@@ -20,7 +20,7 @@
             @clearAllCompleted="clearAllCompleted"
             />
           <router-view></router-view>
-    </section> 
+    </section>
 </template>
 
 <script>

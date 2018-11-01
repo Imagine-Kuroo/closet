@@ -1,6 +1,6 @@
 <template>
   <section>
-    <Menu active-name="1-2" :open-names="['1']">
+    <Menu active-name="1-2" :theme="theme1" :open-names="['1']">
         <Submenu name="1">
             <template slot="title">
                 <Icon type="ios-analytics" />
@@ -44,7 +44,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      theme1: "dark"
+    };
+  }
+};
 </script>
 
 <style>

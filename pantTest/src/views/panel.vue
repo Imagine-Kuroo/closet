@@ -54,7 +54,7 @@ export default {
   width: 100%;
   height: 100%;
   float: left;
-  background-color: pink;
+  background-color: white;
   padding-top: 60px;
 }
 </style>

@@ -7,21 +7,21 @@ const Panel = () => import('../views/panel.vue');
 
 export const routeArr = [
   {
-    path: 'testmodule',
+    path: 'test',
     name: '测试T',
     icon: 'clipboard',
     component: resolve => require(['../layout/base.vue'], resolve),
     children: testRoutes
   },
   {
-    path: 'aestmodule',
+    path: 'aest',
     name: '测试A',
     icon: 'clipboard',
     component: resolve => require(['../layout/base.vue'], resolve),
     children: aestRoutes
   },
   {
-    path: 'bestmodule',
+    path: 'best',
     name: '测试B',
     icon: 'clipboard',
     component: resolve => require(['../layout/base.vue'], resolve),

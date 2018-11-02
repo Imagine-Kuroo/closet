@@ -30,7 +30,6 @@ export default {
   height: 100%;
   padding-left: 240px;
   position: relative;
-  color: #ffffff;
 }
 
 .box_header {
@@ -38,6 +37,7 @@ export default {
   margin-left: -240px;
   position: fixed;
   z-index: 999;
+  color: #ffffff;
   background-color: #515a6e;
   box-shadow: 0 0 5px #333333;
 }

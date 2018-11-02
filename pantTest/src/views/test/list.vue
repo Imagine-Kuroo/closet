@@ -6,6 +6,8 @@
             <Page :total="100" :current="1" @on-change="changePage"></Page>
         </div>
     </div> -->
+
+    <h1>this is test list</h1>
   </div>
 </template>
 

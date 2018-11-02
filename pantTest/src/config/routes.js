@@ -7,29 +7,27 @@ const Panel = () => import('../views/panel.vue');
 
 export const routeArr = [
   {
-    path: 'test',
+    path: 'testmodule',
     name: '测试T',
     icon: 'clipboard',
     component: resolve => require(['../layout/base.vue'], resolve),
     children: testRoutes
   },
   {
-    path: 'aest',
+    path: 'aestmodule',
     name: '测试A',
     icon: 'clipboard',
     component: resolve => require(['../layout/base.vue'], resolve),
     children: aestRoutes
   },
   {
-    path: 'best',
+    path: 'bestmodule',
     name: '测试B',
     icon: 'clipboard',
     component: resolve => require(['../layout/base.vue'], resolve),
     children: bestRoutes
   }
 ]
-
-console.log(routeArr, ', ...routeArr--->', ...routeArr);
 
 export default [
   {

@@ -4,13 +4,13 @@ const testUpdate = () => import('../views/test/update.vue');
 
 export default [
   {
-    path: '/test/list',
-    name: 'testlist',
+    path: '/best/list',
+    name:'bestlist',
     component: testList
   },
   {
-    path: '/test/update',
-    name: 'testupdate',
+    path: '/best/update',
+    name:'bestupdate',
     component: testUpdate
   }
 ]

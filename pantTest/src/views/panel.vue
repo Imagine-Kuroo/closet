@@ -26,7 +26,7 @@ export default {
 
 <style lang="stylus" scoped>
 #panel {
-  min-width: 1000px;
+  width: 100%;
   height: 100%;
   padding-left: 240px;
   position: relative;
@@ -43,12 +43,13 @@ export default {
 }
 
 .box_leftMenu {
-  height: 100%;
   width: 240px;
+  height: 100%;
   margin-left: -240px;
   float: left;
   padding-top: 60px;
   background-color: #515a6e;
+  overflow: hidden;
 }
 
 .box_mainContent {

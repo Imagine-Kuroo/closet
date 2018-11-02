@@ -6,8 +6,8 @@ export default () => {
     routes,
     mode: 'history',
     // base: '/base/'
-    linkActiveClass: 'active-link',
-    linkExactActiveClass: 'exact-active-link',
+    // linkActiveClass: 'active-link',
+    // linkExactActiveClass: 'exact-active-link',
     scrollBehavior(to, from, savedPosition) {
       if (savedPosition) {
         console.log('savedPosition--->', savedPosition);

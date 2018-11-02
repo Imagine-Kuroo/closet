@@ -1,15 +1,14 @@
 <template>
-  <section>
-    <Menu active-name="1-2" :theme="theme1" :open-names="['1']">
+  <section id="wrapper">
+    <Menu active-name="1-2" :theme="theme1" :open-names="['1']" accordion>
         <Submenu name="1">
             <template slot="title">
                 <Icon type="ios-analytics" />
                 Navigation One
             </template>
             <MenuGroup title="Item 1">
-                <MenuItem name="1-1"><router-link to="/login">login</router-link></MenuItem>
-                <MenuItem name="1-2"><router-link to="/test/list">testlist</router-link></MenuItem>
-                <MenuItem name="1-2"><router-link to="/test/update">testupdate</router-link></MenuItem>
+                <MenuItem name="1-1">ss</MenuItem>
+                <MenuItem name="1-2">dd</MenuItem>
             </MenuGroup>
             <MenuGroup title="Item 2">
                 <MenuItem name="1-3">Option 3</MenuItem>
@@ -53,5 +52,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="stylus" scoped>
+#wrapper {
+    width: 100%;
+}
 </style>
+

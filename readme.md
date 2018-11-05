@@ -9,8 +9,11 @@
 
 ### FILEs
 
-#### pantHiro
-+ 跟着网上的vue写的课程代码；
+#### pantTest
++ 慕课网 
++ 1 vue+webpack打造todo应用
++ 2 vue核心技术 vue+vue-router+vuex+ssr实战精讲
++ 3 vue+webpack4+iview3 实现一个后台管理系统
 
 #### pantNew [微信小程序]
 + 一个简单的音乐播放器；

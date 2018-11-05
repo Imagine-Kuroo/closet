@@ -18,7 +18,7 @@ export default {
     toList() {
       console.log(">>>>>");
       this.$router.push({
-        path: "/panel/testmodule/list"
+        path: "/panel/test/list"
       });
     }
   }

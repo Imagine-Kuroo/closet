@@ -8,17 +8,13 @@
 ### PROJECTs
 
 #### pantTest [vue+webpack4+iview3+SSR+koa][ING]
-+ [慕课网 vue学习项目]
-+ 1 vue+webpack打造todo应用
-+ 2 vue核心技术 vue+vue-router+vuex+ssr实战精讲
+##### 慕课网 vue学习项目
++ 1 [vue+webpack打造todo应用](https://www.imooc.com/learn/935)
++ 2 [vue核心技术 vue+vue-router+vuex+ssr实战精讲](https://coding.imooc.com/learn/list/196.html)
 + 3 实现一个后台管理系统
-> [LINK]
-> 1 https://coding.imooc.com/learn/list/196.html
-> 2 https://www.imooc.com/learn/935
-
 
 #### pantKoa [Node+express+koa+koa2][UNDO]
-+ nodejs入门
+##### nodejs入门
 + 1 express
 + 2 koa+koa2
 

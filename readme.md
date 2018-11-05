@@ -1,10 +1,14 @@
 
 # CLOSET
 
+### INTRODUCTION
++ 就像是一个装了各种衣服的衣柜一样。
+
+
 ### PROJECTs
 
 #### pantTest [vue+webpack4+iview3+SSR+koa][ING]
-+ 慕课网 vue学习
++ 慕课网 vue学习项目
 + 1 vue+webpack打造todo应用
 + 2 vue核心技术 vue+vue-router+vuex+ssr实战精讲
 + 3 实现一个后台管理系统
@@ -30,5 +34,3 @@
 ### MATERIAL
 + 总结遇到的问题/知识点 和一些命令行等等
 
-### INTRODUCTION
-+ 一个装了一些demo的柜子

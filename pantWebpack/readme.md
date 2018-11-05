@@ -1,6 +1,9 @@
 + [webpack深入与实战](https://www.imooc.com/learn/802)
 
-+ webpack4 基本打包命令
+#### webpack 基本配置
+
+
+#### webpack4 基本打包命令
 
 `
  webpack hello.js -o hello.bundle.js
@@ -16,10 +19,7 @@
 + --progress 百分比读条
 + --display-modules 打包的模块
 + --display-reasons 打包的原因
-`
- webpack ./src/hello.js -o ./build/hello.bundle.js --module-bind 'css=style-loader!css-loader' --watch
-`
 
-<!-- (```)
- webpack hello.js -o hello.bundle.js
-(```) -->
+(```)
+ webpack ./tSrc/hello.js -o ./tBuild/hello.bundle.js --module-bind 'css=style-loader!css-loader' --watch
+(```)

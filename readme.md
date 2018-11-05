@@ -12,9 +12,9 @@
 + 1 vue+webpack打造todo应用
 + 2 vue核心技术 vue+vue-router+vuex+ssr实战精讲
 + 3 实现一个后台管理系统
-+ [LINK]
-+ 1 https://coding.imooc.com/learn/list/196.html
-+ 2 https://www.imooc.com/learn/935
+> [LINK]
+> 1 https://coding.imooc.com/learn/list/196.html
+> 2 https://www.imooc.com/learn/935
 
 
 #### pantKoa [Node+express+koa+koa2][UNDO]

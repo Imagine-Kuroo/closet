@@ -6,18 +6,7 @@ const HTMLPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const baseConfig = require('./webpack.config.base');
-const devServer = {
-  port: 8080,
-  host: 'localhost',
-  overlay: {
-    errors: true,
-  },
-  historyApiFallback: {
-    index: '/index.html'
-  },
-  hot: true,
-  open: true
-}
+
 const defaultPlugins = [
   new webpack.DefinePlugin({
     'process.env': {
@@ -25,14 +14,18 @@ const defaultPlugins = [
     }
   }),
   new VueLoaderPlugin(),
-  new HTMLPlugin({
-    template: path.join(__dirname, 'template.html')
-  }),
 ];
 
 let config = merge(baseConfig, {
-  entry: path.join(__dirname, '../temp/index.js'),
-  devtool: '#cheap-module-eval-source-map',
+  target: 'node',
+  entry: path.join(__dirname, '../src/server-entry.js'),
+  devtool: 'source-map',
+  output: {
+    libraryTarget: 'commonjs2',
+    filename: 'server-entry.js',
+    path: path.join(__dirname, '../server-build')
+  },
+  externals: Object.keys(require('../package.json').dependencies),
   module: {
     rules: [
       {
@@ -51,7 +44,6 @@ let config = merge(baseConfig, {
       }
     ]
   },
-  devServer,
   resolve: {
     alias: {
       'vue': path.join(__dirname, '../node_modules/vue/dist/vue.esm.js')

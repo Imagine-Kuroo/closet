@@ -13,10 +13,13 @@
 + 2 [vue核心技术 vue+vue-router+vuex+ssr实战精讲](https://coding.imooc.com/learn/list/196.html)
 + 3 实现一个后台管理系统
 
-#### pantKoa [Node+express+koa+koa2][UNDO]
+#### pantNode [Node+express+koa+koa2][UNDO]
 ##### nodejs入门
 + 1 express
 + 2 koa+koa2
+> 参考
+> [koa-demos](https://github.com/ruanyf/koa-demos)
+> [koa2进阶学习笔记](https://chenshenhai.github.io/koa2-note/)
 
 #### pantNew [微信小程序]
 + 一个简单的音乐播放器

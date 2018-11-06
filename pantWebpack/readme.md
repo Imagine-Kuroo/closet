@@ -4,8 +4,8 @@
 
 ```
 npm i css-loader style-loader --save-dev //加载css
-npm i file-loader --save-dev //加载图片
-npm i url-loader --save-dev // 处理图片：小于limit设置的图片会用base64处理
+npm i file-loader --save-dev //加载图片 **publicPath必须配置**，否则编译后的图片路径默认是根目录
+npm i url-loader --save-dev // 处理图片：小于limit设置的图片会用base64处理 
 npm i html-webpack-plugin --save-dev // 自动生成一个index.html,所有的bundle会自动添加进去
 npm i clean-webpack-plugin --save-dev // 构建前清理指定文件夹 dist
 
@@ -22,7 +22,8 @@ devServer: {                 // 配合webpack-dev-server使用，效果更佳
   contentBase: './dist'
 },
 output:{
-   publicPath: '/'           // 配合webpack-dev-middleware使用，效果更佳
+  ...
+  publicPath: '/'           // 配合webpack-dev-middleware使用，效果更佳
 }
 
 ```

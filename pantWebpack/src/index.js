@@ -1,20 +1,16 @@
 import _ from 'lodash';
-import './res/style/global.css'
-import avatar from './res/img/avatar.jpg'
+import printMe from './print.js';
 
 function component() {
   let element = document.createElement('div');
+  let btn = document.createElement('button');
 
-  // Lodash, now imported by this script
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
 
-  
-  // 插入图片
-  var myAvatar = new Image();
-  myAvatar.src = avatar;
-  element.appendChild(myAvatar);
+  btn.innerHTML = 'Click me and check the console!';
+  btn.onclick = printMe;
 
+  element.appendChild(btn);
   return element;
 }
 

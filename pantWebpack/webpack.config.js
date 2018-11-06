@@ -16,6 +16,23 @@ module.exports = {
     port: 9000,
     hot: true
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpg|jpeg)/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 1024
+          }
+        }]
+      }
+    ]
+  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({

@@ -41,6 +41,8 @@ output:{
 
 ```
 // server.js  配合webpack-dev-middleware+express+webpack 使用
+// server.js内未安装express，但是运行却没问题？？？
+
 ```
 
 
@@ -62,9 +64,11 @@ output:{
 + --display-modules 打包的模块
 + --display-reasons 打包的原因
 
-(```)
+```
+
  webpack ./tSrc/hello.js -o ./tBuild/hello.bundle.js --module-bind 'css=style-loader!css-loader' --watch
-(```)
+
+```
 
 
 

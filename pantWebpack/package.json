@@ -2,15 +2,19 @@
   "name": "pantwebpack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "ku",
   "license": "ISC",
   "dependencies": {
     "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "lodash": "^4.17.11",
     "style-loader": "^0.23.1",
-    "webpack": "^4.24.0"
+    "webpack": "^4.24.0",
+    "webpack-cli": "^3.1.2"
   }
 }

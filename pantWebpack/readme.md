@@ -2,18 +2,30 @@
 + src 源码 目录
 + dist 分发 目录
 
-(```)
+```
 
 npm i css-loader style-loader --save-dev //加载css
 npm i file-loader --save-dev //加载图片
 npm i url-loader --save-dev // 处理图片：小于limit设置的图片会用base64处理
 npm i html-webpack-plugin --save-dev // 自动生成一个index.html,所有的bundle会自动添加进去
 npm i clean-webpack-plugin --save-dev // 构建前清理指定文件夹 dist
+```
 
-
+```
 //webpack.config.js
 devtool: 'inline-source-map' //定位 错误出错的位置和文件
-(```)
+```
+
+```
+//package.json
+
+"scripts": {
+    "watch": "webpack --watch" 
+  },
+
+//webpack的watch模式会在代码变动后自动编译，但是无法主动刷新页面
+
+```
 
 
 

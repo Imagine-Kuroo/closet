@@ -3,7 +3,6 @@
 + dist 分发 目录
 
 ```
-
 npm i css-loader style-loader --save-dev //加载css
 npm i file-loader --save-dev //加载图片
 npm i url-loader --save-dev // 处理图片：小于limit设置的图片会用base64处理
@@ -73,8 +72,8 @@ output:{
 
 
 > 参考
-> [webpack入门](https://www.webpackjs.com/guides/getting-started/)
-> [webpack配置](https://www.webpackjs.com/configuration/)
-> [webpack-dev-server](https://www.webpackjs.com/configuration/dev-server/)
-> [webpack深入与实战](https://www.imooc.com/learn/802)
+> + [webpack入门](https://www.webpackjs.com/guides/getting-started/)
+> + [webpack配置](https://www.webpackjs.com/configuration/)
+> + [webpack-dev-server](https://www.webpackjs.com/configuration/dev-server/)
+> + [webpack深入与实战](https://www.imooc.com/learn/802)
 >

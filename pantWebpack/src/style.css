@@ -1,3 +1,4 @@
 body {
   background: url('./avatar.jpg');
+  background-repeat: no-repeat;
 }

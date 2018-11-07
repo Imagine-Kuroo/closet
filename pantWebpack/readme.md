@@ -4,14 +4,16 @@
 
 ```
 npm i css-loader style-loader --save-dev //加载css
-npm i file-loader --save-dev //加载图片 **publicPath必须配置**，否则编译后的图片路径默认是根目录
+npm i file-loader --save-dev // 加载图片 **publicPath必须配置**，否则编译后的图片路径默认是根目录
 npm i url-loader --save-dev // 处理图片：小于limit设置的图片会用base64处理 
 npm i html-webpack-plugin --save-dev // 自动生成一个index.html,所有的bundle会自动添加进去
 npm i clean-webpack-plugin --save-dev // 构建前清理指定文件夹 dist
 
 npm i webpack-dev-server --save-dev // 提供一个简单的web服务器，并且能够实时重新加载(live reloading)
 
-npm i webpack-dev-middleware --save-dev  //容器wrapper。把webpack处理后的文件传递给一个服务器（server）
+npm i webpack-dev-middleware --save-dev  // 容器wrapper。把webpack处理后的文件传递给一个服务器（server）
+
+npm i webpack-merge --save-dev // 合并不同的配置文件
 
 ```
 

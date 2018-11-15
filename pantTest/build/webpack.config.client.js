@@ -5,8 +5,10 @@ const merge = require('webpack-merge');
 const HTMLPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const VueClientPlugin = require('vue-server-renderer/client-plugin');
 
 const baseConfig = require('./webpack.config.base');
+
 const isDev = process.env.NODE_ENV === 'development';
 const devServer = {
   port: 8000,

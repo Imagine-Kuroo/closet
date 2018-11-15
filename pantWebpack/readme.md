@@ -1,3 +1,12 @@
+npm run build时报错如下：
+```
+ERROR in app.bundle.js from UglifyJs
+Unexpected token: name (element) [./src/index.js:6,0][app.bundle.js:17920,6]
+
+```
+因为：webpack打包时无法转换index.js里的es6语法(可能是import?)
+解决：安装babel-loader,babel-core,babel-preset-es2015，并配置.babelrc和webpack.config.js里js的rules
+
 #### webpack 基本配置
 + src 源码 目录
 + dist 分发 目录

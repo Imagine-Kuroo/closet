@@ -88,4 +88,4 @@ output:{
 > + [webpack配置](https://www.webpackjs.com/configuration/)
 > + [webpack-dev-server](https://www.webpackjs.com/configuration/dev-server/)
 > + [webpack深入与实战](https://www.imooc.com/learn/802)
->
+> + [linux服务器的初步配置流程](http://www.ruanyifeng.com/blog/2014/03/server_setup.html)

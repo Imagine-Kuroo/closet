@@ -1,23 +1,7 @@
 <template>
   <div class="ebook">
-    <transition name="slide-down">
-      <div class="title-wrapper" v-show="ifTitleAndMenuShow">
-        <div class="left">
-          <i class="iconfont icon-back icon"></i>
-        </div>
-        <div class="right">
-          <div class="icon-wrapper">
-            <i class="iconfont icon-cart icon"></i>
-          </div>
-          <div class="icon-wrapper">
-            <i class="iconfont icon-person icon"></i>
-          </div>
-          <div class="icon-wrapper">
-            <i class="iconfont icon-more icon"></i>
-          </div>
-        </div>
-      </div>
-    </transition>
+    <Title-Bar 
+      :ifTitleAndMenuShow="ifTitleAndMenuShow"></Title-Bar>
     <div class="read-wrapper">
       <div id="read"></div>
       <div class="mask">
@@ -26,29 +10,22 @@
         <div class="right" @click="nextPage"></div>
       </div>
     </div>
-    <transition name="slide-up">
-      <div class="menu-wrapper" v-show="ifTitleAndMenuShow">
-        <div class="icon-wrapper">
-          <i class="iconfont icon-menu icon"></i>
-        </div>
-        <div class="icon-wrapper">
-          <i class="iconfont icon-progress icon"></i>
-        </div>
-        <div class="icon-wrapper">
-          <i class="iconfont icon-bright icon"></i>
-        </div>
-        <div class="icon-wrapper">
-          <i class="iconfont icon-A icon"></i>
-        </div>
-      </div>
-    </transition>
+    <Menu-Bar 
+      :ifTitleAndMenuShow="ifTitleAndMenuShow"></Menu-Bar>
   </div>
 </template>
 
 <script>
 import Epub from "epubjs";
+import TitleBar from "@/components/TitleBar.vue";
+import MenuBar from "@/components/MenuBar.vue";
+
 const DOWNLOAD_URL = "/static/113933.epub";
 export default {
+  components: {
+    TitleBar,
+    MenuBar
+  },
   data() {
     return {
       ifTitleAndMenuShow: false
@@ -59,11 +36,13 @@ export default {
       this.ifTitleAndMenuShow = !this.ifTitleAndMenuShow;
     },
     prevPage() {
+      this.ifTitleAndMenuShow = false;
       if (this.rendition) {
         this.rendition.prev();
       }
     },
     nextPage() {
+      this.ifTitleAndMenuShow = false;
       if (this.rendition) {
         this.rendition.next();
       }
@@ -93,34 +72,6 @@ export default {
 
 .ebook {
   position: relative;
-  .title-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 101;
-    display: flex;
-    width: 100%;
-    height: px2rem(48);
-    background: white;
-    box-shadow: 0 px2rem(8) px2rem(8) rgba(0, 0, 0, 0.15);
-    .left {
-      flex: 0 0 px2rem(50);
-      @include center;
-    }
-    .right {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      .icon-wrapper {
-        flex: 0 0 px2rem(40);
-        @include center;
-        .icon-cart {
-          font-size: px2rem(22);
-        }
-      }
-    }
-    
-  }
   .read-wrapper {
     .mask {
       position: absolute;
@@ -141,28 +92,6 @@ export default {
         flex: 0 0 px2rem(100);
       }
     }
-  }
-  .menu-wrapper {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 101;
-    display: flex;
-    width: 100%;
-    height: px2rem(48);
-    background: white;
-    box-shadow: 0 px2rem(-8) px2rem(8) rgba(0, 0, 0, 0.15);
-    .icon-wrapper {
-      flex: 1;
-      @include center;
-      .icon-progress {
-        font-size: px2rem(26);
-      }
-      .icon-bright {
-        font-size: px2rem(22);
-      }
-    }
-    
   }
 }
 </style>

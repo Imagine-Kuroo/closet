@@ -11,7 +11,8 @@
       </div>
     </div>
     <Menu-Bar 
-      :ifTitleAndMenuShow="ifTitleAndMenuShow"></Menu-Bar>
+      :ifTitleAndMenuShow="ifTitleAndMenuShow"
+      ref="menuBar"></Menu-Bar>
   </div>
 </template>
 
@@ -34,15 +35,18 @@ export default {
   methods: {
     toggleTitleAndMenu() {
       this.ifTitleAndMenuShow = !this.ifTitleAndMenuShow;
+      if (!this.ifTitleAndMenuShow) {
+        this.$refs.menuBar.hideSetting();
+      }
     },
     prevPage() {
-      this.ifTitleAndMenuShow = false;
+      // this.ifTitleAndMenuShow = false;
       if (this.rendition) {
         this.rendition.prev();
       }
     },
     nextPage() {
-      this.ifTitleAndMenuShow = false;
+      // this.ifTitleAndMenuShow = false;
       if (this.rendition) {
         this.rendition.next();
       }
@@ -77,7 +81,7 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 100;
+      z-index: 99;
       width: 100%;
       height: 100%;
       display: flex;

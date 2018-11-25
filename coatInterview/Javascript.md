@@ -12,7 +12,7 @@ PDD
 + js 的渲染堵塞 如何处理
 + jquery extend
 + nodejs的事件渲染机制
-+ vue的10种组件通信方式
++ vue的组件通信方式
 + vuex
 + 小程序如何设置一个全局变量
 + CORS nginx的跨域处理
@@ -114,3 +114,4 @@ console.log(arr.filter(itm => itm.id === 2));
 > + [理解Promise简单实现的背后原理](https://segmentfault.com/p/1210000008832836/read)
 > + [cookie设置HttpOnly](https://blog.csdn.net/zmx729618/article/details/51461261)
 > + [拼多多前端面经](https://www.nowcoder.com/discuss/34549?type=0&order=0&pos=18&page=1)
+> + [vue 8种组件通信方式](https://blog.csdn.net/zhoulu001/article/details/79548350)

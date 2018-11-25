@@ -98,3 +98,4 @@ console.log(arr.filter(itm => itm.id === 2));
 > + [剖析Vue原理&实现双向绑定MVVM](https://segmentfault.com/a/1190000006599500)
 > + [详解 JavaScript的 call() 和 apply()](https://www.cnblogs.com/qiaojie/p/5746688.html)
 > + [es6的箭头函数和es5的function函数区别](https://blog.csdn.net/guxiansheng1991/article/details/80009144)
+> + [理解Promise简单实现的背后原理](https://segmentfault.com/p/1210000008832836/read)

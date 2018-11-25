@@ -1,4 +1,4 @@
-#### 面试题
+#### 面试积累
 
 最近因为种种因素，所以开始出来找工作了。
 不面不知道，一面就彻底的暴露了自己的无知。
@@ -6,6 +6,8 @@
 毕竟，学习是一个持续不断的过程。
 
 ##### 11月的好几次面试（待）
+
+PDD
 + 拿到静态资源后的，页面渲染顺序
 + js 的渲染堵塞 如何处理
 + jquery extend
@@ -13,10 +15,12 @@
 + vue的10种组件通信方式
 + vuex
 + 小程序如何设置一个全局变量
-+ CORS
++ CORS nginx的跨域处理
 + vue 的双向绑定数据渲染
 
 ##### 10月的一次面试
+
+平安子公司
 + 原型/原型链/构造函数/实例的关系图
 + 创建对象的几种方法
 + promise原理
@@ -108,3 +112,4 @@ console.log(arr.filter(itm => itm.id === 2));
 > + [详解 JavaScript的 call() 和 apply()](https://www.cnblogs.com/qiaojie/p/5746688.html)
 > + [es6的箭头函数和es5的function函数区别](https://blog.csdn.net/guxiansheng1991/article/details/80009144)
 > + [理解Promise简单实现的背后原理](https://segmentfault.com/p/1210000008832836/read)
+> + [cookie设置HttpOnly](https://blog.csdn.net/zmx729618/article/details/51461261)

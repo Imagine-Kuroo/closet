@@ -48,10 +48,29 @@ PA和FW
 + typescript
 
 以下主要是一些学习代码。
-```
-// 实现原型链的基本模式
-// 覆盖或增加 超类型中的方法
 
+深拷贝的三种方法：递归、JSON.stringify和JSON.parse、jquery的extend，以下是第一种递归
+```
+deepClone(obj) {
+  let objClone = Array.isArray(obj) ? [] : {};
+  if (obj && typeof obj === "object") {
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        if (obj[key] && typeof obj[key] === "object") {
+          objClone[key] = deepClone(obj[key]);
+        } else {
+          objClone[key] = obj[key];
+        }
+      }
+    }
+  }
+  return objClone;
+}
+```
+
+实现原型链的基本模式
+覆盖或增加 超类型中的方法
+```
 function SuperType() {
   this.property = true;
 }
@@ -89,6 +108,7 @@ var instance = new SubType();
 alert(instance.getSuperValue());
 
 ```
+
 从[es6的箭头函数和es5的function函数区别](https://blog.csdn.net/guxiansheng1991/article/details/80009144)中get了一个简单的方法大概了解一下箭头函数和function的区别
 ```
 let obj = {

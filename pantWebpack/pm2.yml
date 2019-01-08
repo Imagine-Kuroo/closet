@@ -1,7 +1,0 @@
-app:
-  - script: ./server/server.js
-    name: webpack-test
-    env_production:
-      NODE_ENV: production
-      HOST: localhost
-      PORT: 8888

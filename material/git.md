@@ -11,6 +11,8 @@ git reset --hard 版本号 回滚到制定版本号的版本
 
 git checkout -b test 增加 本地分支
 
+git push origin dev:test 推送本地test分支到远程新增dev分支
+
 git branch -a 查看全部分支
 
 git branch -vv 查看本地分支的映射关系

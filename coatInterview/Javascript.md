@@ -1,5 +1,7 @@
 #### 面试积累
 
+ [面试题总结文档](https://shimo.im/docs/Ac5azp5SZwgekoh0/)
+
 最近因为种种因素，所以开始出来找工作了。
 不面不知道，一面就彻底的暴露了自己的无知。
 写一个文件记录一下被问倒的，答得不咋样的问题。
@@ -142,6 +144,7 @@ console.log(arr.filter(itm => itm.id === 2));
 ```
 >
 > 参考附录
+> 
 > + [详谈JavaScript原型链](https://www.cnblogs.com/chengzp/p/prototype.html)
 > + [剖析Vue原理&实现双向绑定MVVM](https://segmentfault.com/a/1190000006599500)
 > + [详解 JavaScript的 call() 和 apply()](https://www.cnblogs.com/qiaojie/p/5746688.html)

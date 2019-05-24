@@ -74,9 +74,13 @@ console.log(func.constructor)  // Function
 + some
 + filter
 + reduce
-#### promise原理及实现
+#### promise及实现
++ promise原理及实现
++ promise.all
++ promise.race
 
 ### ES7
+### AMD\CMD\UMD
 
 ## 四、异步
 
@@ -97,4 +101,22 @@ console.log(func.constructor)  // Function
 #### 网络安全
 
 #### http/https
+
+## 五、Javascript编程思想
+### 面向过程
+### 深浅拷贝
+### 面向对象OO
+``` javascript
+// 创建对象的方式
+// 继承的几种方法
+// 原型、原型链
+```
+### 设计模式
+### 函数式编程
+``` javascript
+// 高阶函数
+// curry化
+// compose
+```
+### AST
 

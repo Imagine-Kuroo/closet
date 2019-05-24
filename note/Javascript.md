@@ -91,33 +91,29 @@
     + cookie 
       + cookie有哪些字段：key\value\expires
       + cookie\session\localStorage
-
     + 缓存
-      + 强缓存\协商缓存
-
+    + 强缓存\协商缓存
     + 网络安全
-
     + http/https
 
 ## 五、Javascript编程思想
   1. 面向过程
   1. 深浅拷贝
   1. 面向对象OO
-    ``` javascript
-    // 创建对象的方式
-    // 继承的几种方法
-    // 原型、原型链
-    ```
+      ``` javascript
+      // 创建对象的方式
+      // 继承的几种方法
+      // 原型、原型链
+      ```
   1. 设计模式
   1. 函数式编程
-    ``` javascript
-    // 高阶函数
-    // curry化
-    // compose
-    ```
+      ``` javascript
+      // 高阶函数
+      // curry化
+      // compose
+      ```
   1. AST
-
-
+  
 ## 六、性能优化
   1. 手动实现节流(throttle)&防抖(debounce)
   1. 读lodash源码

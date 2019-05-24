@@ -120,3 +120,7 @@ console.log(func.constructor)  // Function
 ```
 ### AST
 
+
+## 六、性能优化
+### 手动实现节流(throttle)&防抖(debounce)
+

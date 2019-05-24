@@ -123,4 +123,5 @@ console.log(func.constructor)  // Function
 
 ## 六、性能优化
 ### 手动实现节流(throttle)&防抖(debounce)
+### 读lodash源码
 

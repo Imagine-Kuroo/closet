@@ -4,11 +4,11 @@ class Father {
     }
 
     static hasSon() {
-        console.log('????')
+        console.log(this.name, ' --- > hasSon ')
     }
 
     introduceSelf() {
-        console.log('brushTooth--->', this)
+        console.log('\n\n\n', this.name, 'brushTooth---> \n\n', this.constructor)
     }
 }
 
@@ -18,11 +18,12 @@ class Son extends Father {
         this.age = age
     }
 }
-var father1 = new Father('111')
-var son1 = new Son('444', 12);
+var father1 = new Father('爹')
+var son1 = new Son('儿砸', 12);
 
 father1.introduceSelf() // brushTooth---> Father { name: '111' }
 son1.introduceSelf()    // brushTooth---> Son { name: '444', age: 12 }
 
-// father1.hasSon() //无法调用类的静态方法
-// son1.hasSon()    //无法调用类的静态方法
+Father.hasSon() // 调用自己的静态方法
+Son.hasSon()    // 调用从Father继承来的静态方法
+

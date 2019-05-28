@@ -48,7 +48,14 @@ const requestHandle = (r) => {
     request.query = query
     request.body = r.split('\r\n\r\n')[1]
     console.log('request === > \n', request)
-    return raw
+
+
+    const route = {}
+    const routes = Object.assign(route, routeSet)
+    const response = routes[path] || error
+    const resp = response[request]
+
+    return resp
 }
 
 const run = (host = '', port = 3000) => {

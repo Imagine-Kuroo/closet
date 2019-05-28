@@ -50,7 +50,25 @@
 ### 二、Javascript引擎
 ---
 
-  1. 闭包的作用
+  1. 闭包
+      ``` javascript
+        function a() {
+            var ins = 54;
+            var ops = {
+                add: function () {
+                    console.log(ins, ' --- > ', ++ins)
+                },
+                minus: function () {
+                    console.log(ins, ' --- > ', --ins)
+                },
+            }
+            return ops
+        }
+
+        var ap = a()
+        ap.minus()
+        ap.add()
+      ```
 
   1. 宏任务和微任务EventLoop
 
@@ -60,10 +78,14 @@
 
 ### 三、ES演进
 ---
-
+  1. js
+    + 七种原始数据类型：undefined\null\Boolean\String\Number\Object\Symbol
+    + 表示"集合"的数据结构：Array\Object\Map\Set
   1. ES5
-
   1. ES6
+    + Iterator(迭代器)
+      + for...of
+    + "集合"：Map\Set
     + map\forEach\some\every\filter\reduce使用 打断
       + map
       + forEach 无法中止/跳出，除非抛异常

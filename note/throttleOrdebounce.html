@@ -13,36 +13,60 @@
 
 </body>
 <script>
-    function debounce(func, secs) {
-        var timeSet = null;
-        return function () {
-            if (timeSet != null) {
-                clearTimeout(timeSet)
-            }
-            timeSet = setTimeout(func, secs)
-        }
-    }
+    // // 简陋 节流
+    // window.addEventListener('scroll', function () {
+    //     if (!prev) {
+    //         prev = Date.now()
+    //     }
+    //     now = Date.now()
+    //     if (now - prev >= 1000) {
+    //         prev = Date.now()
+    //         scrollEvent();
+    //         console.log('触发！')
+    //     }
+    // });
+    // // 简易 防抖
+    // function debounceScroll(func, secs) {
+    //     var timeSet = null;
+    //     return function () {
+    //         if (timeSet != null) {
+    //             clearTimeout(timeSet)
+    //         }
+    //         timeSet = setTimeout(func, secs)
+    //     }
+    // }
+    // // 简易 节流
+    // function throttleScroll(func, secs) {
+    //     var prev = Date.now()
+    //     return function () {
+    //         var now = Date.now()
+    //         if (now - prev >= secs) {
+    //             prev = Date.now()
+    //             func()
+    //         }
+    //     }
+    // }
     function throttle(func, secs) {
         var prev = Date.now()
-        console.log('prev--->', prev)
         return function () {
             var context = this;
             var args = arguments;
             var now = Date.now();
-            console.log('prev--->', prev, ',now--->', now)
             if (now - prev >= secs) {
                 func.apply(context, args)
                 prev = Date.now()
-                console.log('prev--->', prev)
             }
         }
     }
-    function scrollEvent() {
-        console.log('random ==> ', Math.random());
+    function scrollEvent(args) {
+        console.log('触发random ==> ', Math.random());
     }
     // window.addEventListener('scroll', scrollEvent);
-    // window.addEventListener('scroll', debounce(scrollEvent, 300));
+    // window.addEventListener('scroll', debounceScroll(scrollEvent, 1000));
+    // window.addEventListener('scroll', throttleScroll(scrollEvent, 1000));
     window.addEventListener('scroll', throttle(scrollEvent, 1000));
+
+
 </script>
 
 </html>

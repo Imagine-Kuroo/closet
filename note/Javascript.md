@@ -123,35 +123,24 @@
 ---
 
   1. 节流(throttle)&防抖(debounce)/读lodash源码
-    ``` javascript
-    function debounce(func, secs) {
-      var timeSet = null;
-        return function () {
-            if (timeSet != null) {
-                clearTimeout(timeSet)
-            }
-            timeSet = setTimeout(func, secs)
-        }
-    }
-    function throttle(func, secs) {
-        var prev = Date.now()
-        console.log('prev--->', prev)
-        return function () {
-            var context = this;
-            var args = arguments;
-            var now = Date.now();
-            console.log('prev--->', prev, ',now--->', now)
-            if (now - prev >= secs) {
-                func.apply(context, args)
-                prev = Date.now()
-                console.log('prev--->', prev)
-            }
-        }
-    }
-    function scrollEvent() {
-        console.log('====>scroll');
-    }
-    // window.addEventListener('scroll', scrollEvent);
-    // window.addEventListener('scroll', debounce(scrollEvent, 300));
-    window.addEventListener('scroll', throttle(scrollEvent, 1000));
-    ```
+      ``` javascript
+      function debounce(func, secs) {
+        var timeSet = null;
+          return function () {
+              if (timeSet != null) {
+                  clearTimeout(timeSet)
+              }
+              timeSet = setTimeout(func, secs)
+          }
+      }
+      function throttleScroll(func, secs) {
+          var prev = Date.now()
+          return function () {
+              var now = Date.now()
+              if (now - prev >= secs) {
+                  prev = Date.now()
+                  func()
+              }
+          }
+      }
+      ```

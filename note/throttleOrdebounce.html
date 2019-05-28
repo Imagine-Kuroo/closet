@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width:100px;height:5000px;background-color:#cccccc;"></div>
+
+</body>
+<script>
+    function debounce(func, secs) {
+        var timeSet = null;
+        return function () {
+            if (timeSet != null) {
+                clearTimeout(timeSet)
+            }
+            timeSet = setTimeout(func, secs)
+        }
+    }
+    function throttle(func, secs) {
+        var prev = Date.now()
+        console.log('prev--->', prev)
+        return function () {
+            var context = this;
+            var args = arguments;
+            var now = Date.now();
+            console.log('prev--->', prev, ',now--->', now)
+            if (now - prev >= secs) {
+                func.apply(context, args)
+                prev = Date.now()
+                console.log('prev--->', prev)
+            }
+        }
+    }
+    function scrollEvent() {
+        console.log('random ==> ', Math.random());
+    }
+    // window.addEventListener('scroll', scrollEvent);
+    // window.addEventListener('scroll', debounce(scrollEvent, 300));
+    window.addEventListener('scroll', throttle(scrollEvent, 1000));
+</script>
+
+</html>

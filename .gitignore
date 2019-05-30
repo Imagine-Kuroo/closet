@@ -5,3 +5,7 @@ pantWebpack/node_modules/
 pantVueCli/hello-world/node_modules/
 pantVueCli/test-project/node_modules/
 pantMail/smallServer/node_modules/
+
+
+code/vue-demo/hello-world/node_modules/
+code/vue-demo/.vscode/

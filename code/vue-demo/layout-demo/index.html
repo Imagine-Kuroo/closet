@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .leftDiv {
+            width: 100px;
+            height: 100px;
+            background: green;
+            float: left;
+        }
+
+        .normalDiv {
+            height: 100px;
+            background: pink;
+            /*添加overflow:hidden，触发元素BFC*/
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="leftDiv"></div>
+    <div class="normalDiv">
+
+    </div>
+</body>
+<script>
+    // // 把str翻译成驼峰
+    // var str = "vue-element-admin"
+    // function camelCase(str) {
+    //     let cc = str;
+    //     let cArr = cc.split('-');
+    //     let arr = cArr.map(itm => {
+    //         let ntm;
+    //         let h = itm.substring(0, 1)
+    //         ntm = h.toUpperCase() + itm.substring(1, itm.length)
+    //         return ntm
+    //     })
+    //     cc = arr.join('');
+    //     return cc
+    // }
+    // console.log('camelCase(str)--->', camelCase(str))
+
+    // // 实现一个trim方法
+    // var str = '     风格的鬼地方鬼地方广东分公司分  管地方士大夫鬼地方公司      '
+    // function trim(str) {
+    //     let s = str;
+    //     s = s.replace(/(^\s*)/g, "")
+    //     s = s.replace(/(\s*$)/g, "")
+    //     return s
+    // }
+    // console.log(trim(str))
+
+    // // 考this作用域题目
+    // var name = 'Haha'
+    // var a = {
+    //     name: 'A',
+    //     fun: function () {
+    //         console.log(this, ' --- > ', this.name)
+    //     }
+    // }
+    // var fun1 = a.fun
+
+    // a.fun()
+    // a.fun.call(null, { name: 'B' })
+    // a.fun.call(undefined, { name: 'C' })
+    // a.fun.call({ name: 'D' })
+    // fun1()
+</script>
+
+</html>

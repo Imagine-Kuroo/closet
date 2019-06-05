@@ -85,25 +85,62 @@
   1. ES6
     + Iterator(迭代器)
       + for...of
-    + "集合"：Map\Set
+    + Symbol(需要搭配Iterator一起食用)
+      + 相同参数的Symbol函数的返回值不相等
+        ``` javascript
+          let s1 = Symbol()
+          let s2 = Symbol()
+          s1 === s2 // false
+
+          let s3 = Symbol('foo')
+          let s4 = Symbol('foo')
+          s3 === s4 // false
+        ```
+      + 不能与其他类型的值进行运算，会报错
+        ``` javascript
+          let sym = Symbol('My symbol')
+          console.log('your '+sym)   // Uncaught TypeError: Cannot convert a Symbol value to a string
+          console.log(`your ${sym}`)   // Uncaught TypeError: Cannot convert a Symbol value to a string
+        ```
+      + 可以显式转为String\Boolean,但不可以转成Number
+        ``` javascript
+          let sym = Symbol('isSymbol')
+          String(sym) // "Symbol(isSymbol)"
+          sym.toString() // "Symbol(isSymbol)"
+
+          let sym1 = Symbol()
+          Boolean(sym1) //  true
+          !sym1 //  false
+          
+          let sym2 = Symbol() 
+          Number(sym2)  // Uncaught TypeError: Cannot convert a Symbol value to a number
+          sym2+2  // Uncaught TypeError: Cannot convert a Symbol value to a number
+        ```
+      + Symbol.prototype.description ES2019
+        ``` javascript
+          const sym = Symbol('foo')
+          sym.description // "foo"
+        ```
+    + Generator(需要搭配Iterator一起食用)
+    + 集合：Map\Set
     + map\forEach\some\every\filter\reduce使用 打断
-      + map
-      + forEach 无法中止/跳出，除非抛异常
+      + map 返回一个新数组
+      + forEach 对自身进行操作 无法中止/跳出，除非抛异常
       + every
       + some
       + filter
       + reduce
     + promise
       + promise原理及实现
-      + promise.all
-      + promise.race
+      + promise.all/promise.race
+s    
 
   1. ES7
 
   1. AMD\CMD\UMD
 
 
-### 四、异步
+### 四、异步机制
 ---
 
   1. 回调函数

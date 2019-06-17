@@ -20,3 +20,5 @@ git branch -vv 查看本地分支的映射关系
 git branch --unset-upstream 取消当前分支与远程分支的映射关系
 
 git branch -u origin/dev 建立当前分支与远程分支dev的映射关系
+
+git checkout -b 本地分支X origin/远程分支X 拉去远程分支到本地创建本地分支

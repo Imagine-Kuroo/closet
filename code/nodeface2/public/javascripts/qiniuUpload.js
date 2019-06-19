@@ -3,14 +3,10 @@ const url = require('url')
 const http = require('http')
 const sizeOf = require('image-size')
 
-// const accessKey = '.......';
-// const secretKey = '.......';
-// const qiniu_bucket = '.......';
-// const qiniu_file_hostname =  '.......';
-const accessKey = 'C8Afm23jFmEVHo26esLEAR-bJT3v2X16cD_XTn42';
-const secretKey = 'wetyVbKOTZMGsGybGstx1raIk6Qa54osWJakKL9b';
-const qiniu_bucket = 'shizhi';
-const qiniu_file_hostname = 'http://omxx7cyms.bkt.clouddn.com';
+const accessKey = '.......';
+const secretKey = '.......';
+const qiniu_bucket = '.......';
+const qiniu_file_hostname =  '.......';
 
 // mac鉴权 && 构建 BucketManager对象
 const mac = new qiniu.auth.digest.Mac(accessKey, secretKey);

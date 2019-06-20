@@ -1,9 +1,7 @@
 # BASIC
 记录一些常用的git操作
 
-git pull 拉取代码
-
-git push 推送代码
+git pull 拉取代码  git push 推送代码
 
 git push origin --delete develop 删除名为develop的远程分支
 

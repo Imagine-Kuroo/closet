@@ -1,13 +1,2 @@
-canvas/test1/node_modules/
-pantTest/node_modules/
-pantNode/node_modules/
-pantWebpack/node_modules/
-pantVueCli/hello-world/node_modules/
-pantVueCli/test-project/node_modules/
-pantMail/smallServer/node_modules/
 
 
-code/vue-demo/hello-world/node_modules/
-code/vue-demo/.vscode/
-code/express-demo/node_modules/
-code/nodeface2/node_modules/

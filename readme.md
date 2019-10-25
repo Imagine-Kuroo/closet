@@ -6,6 +6,7 @@
 
 #### readmes
 1. 记录平时的学习笔记
+- [typescript](https://github.com/Imagine-Kuroo/closet/blob/master/readmes/typescript.md)
 - [es6](https://github.com/Imagine-Kuroo/closet/blob/master/readmes/es6.md)
 - [JS](https://github.com/Imagine-Kuroo/closet/blob/master/readmes/JS.md)
 - [python](https://github.com/Imagine-Kuroo/closet/blob/master/readmes/python.md)
